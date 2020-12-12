@@ -1,0 +1,23 @@
+Creare due tipologie di processo:
+Processo A, sarà un processo di tipo taxi.
+Processo B, sarà un processo di tipo richiesta.
+
+
+
+----PROCESSO TAXI : A -----
+Il processo padre crea n processi taxi tramite un for, è rimarrà in ascolto una pipe se un taxi muore, così da rigenerarlo all'esigenza.
+Il processo taxi alla terminazione della sua inizializzazione manderà un segnale ad un semaforo che verrà decrementato, quando il semaforo =0 allora tutti i processi
+sono pronti e i taxi possono iniziare a girare.
+
+----PROCESSO RICHIESTA : B----
+Il processo padre genera n processi di tipo richiesta, alla creazione bisognerà identificare se il processo è un source un buco (uno esclude l'altro),
+o una semplice cella,
+è gli verrà assegnato un indice che è la sua posizione nella matrice (mappa).
+
+
+----METODI NECESSARI PER I PROCESSI RICHIESTA---
+1-metodo che riconosce se la cella è circondata da celle hole (bisogna evitare le barriere di hole).
+2-metodi dell'incremento e decremento dei vari semafori
+3-metodo per il confronto dei vari viaggi per verificare quale sia il più lungo 
+
+
